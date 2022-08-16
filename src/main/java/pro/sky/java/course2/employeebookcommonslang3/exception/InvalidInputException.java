@@ -4,23 +4,23 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 @ResponseStatus(HttpStatus.BAD_REQUEST)
-public class invalidInputException extends RuntimeException {
-    public invalidInputException() {
+public class InvalidInputException extends RuntimeException {
+    public InvalidInputException() {
     }
 
-    public invalidInputException(String message) {
+    public InvalidInputException(String message) {
         super(message);
     }
 
-    public invalidInputException(String message, Throwable cause) {
+    public InvalidInputException(String message, Throwable cause) {
         super(message, cause);
     }
 
-    public invalidInputException(Throwable cause) {
+    public InvalidInputException(Throwable cause) {
         super(cause);
     }
 
-    public invalidInputException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
+    public InvalidInputException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
         super(message, cause, enableSuppression, writableStackTrace);
     }
 }

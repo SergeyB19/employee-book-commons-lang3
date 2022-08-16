@@ -2,13 +2,8 @@ package pro.sky.java.course2.employeebookcommonslang3.service;
 
 import pro.sky.java.course2.employeebookcommonslang3.exception.EmployeeAlreadyAddedException;
 import pro.sky.java.course2.employeebookcommonslang3.exception.EmployeeNotFoundException;
-import pro.sky.java.course2.employeebookcommonslang3.exception.invalidInputException;
+import pro.sky.java.course2.employeebookcommonslang3.exception.InvalidInputException;
 import pro.sky.java.course2.employeebookcommonslang3.model.Employee;
-import pro.sky.java.course2.exception.EmployeeAlreadyAddedException;
-import pro.sky.java.course2.exception.EmployeeNotFoundException;
-import pro.sky.java.course2.exception.invalidInputException;
-import pro.sky.java.course2.model.Employee;
-
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
@@ -32,8 +27,8 @@ public class EmployeeServiceImpl implements EmployeeService {
             throw new EmployeeAlreadyAddedException();
         }
         employees.put(employee.getFullName(), employee);
-        return employee;
     }
+
 
     @Override
     public Employee remove(String firstName, String lastName) {
@@ -63,8 +58,8 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     private void validateInput(String firstName, String lastName) {
-        if (!(isAlpha(firstName) || isAlpha(lastName))) {
-            throw new invalidInputException();
+        if(!isAlpha(firstName) || isAlpha(lastName)) {
+            throw new InvalidInputException();
         }
     }
 }

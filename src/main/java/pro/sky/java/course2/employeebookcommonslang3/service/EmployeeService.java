@@ -1,5 +1,7 @@
 package pro.sky.java.course2.employeebookcommonslang3.service;
 
+import pro.sky.java.course2.employeebookcommonslang3.model.Employee;
+
 import java.util.Collection;
 
 public interface EmployeeService {
