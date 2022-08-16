@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class EmployeeBookCommonsLang3Application {
 
-	public static void main(String[] args) {
-		SpringApplication.run(EmployeeBookCommonsLang3Application.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(EmployeeBookCommonsLang3Application.class, args);
+    }
 
 }
